@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ajax2</title>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+   <script>
+    $(document).ready(function () {
+
+        $("#btn-1").click(function () {
+
+            const var1 = localStorage.getItem("data");
+
+            const myobj = JSON.parse(var1);
+
+            $("#name").val(myobj.name);
+            $("#email").val(myobj.email);
+            $("#mobile").val(myobj.mobile);
+        });
+    });
+</script>
+</head>
+<body>
+
+  <h1>JK - Display Your Details</h1>
+
+  <div id="div1">
+
+      <label for="name">Enter name:</label><br>
+      <input type="text" id="name" name="name"><br><br>
+
+      <label for="mobile">Enter mobile number:</label><br>
+      <input type="text" id="mobile" name="mobile"><br><br>
+
+      <label for="email">Enter email id:</label><br>
+      <input type="text" id="email" name="email"><br><br>
+
+      <button id="btn-1">Display</button>
+
+  </div>
+  
+
+</body>
+</html>

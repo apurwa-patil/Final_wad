@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ajax1</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+  <script>
+    $(document).ready(function () {
+
+        $("#btn-2").click(function () {
+
+            const obj = {
+                name: $("#name").val(),      
+                email: $("#email").val(),    
+                mobile: $("#mobile").val()   
+            };
+
+            const myjson = JSON.stringify(obj);
+
+            localStorage.setItem("data", myjson);
+
+            $("#div1").load("http://127.0.0.1:5500/ajax2.html");
+        });
+    });
+</script>
+</head>
+<body>
+
+ 
+  <h1>JK - Student Details Form</h1>
+
+  <div id="div1">
+
+  
+      <label for="name">Enter name:</label><br>
+      <input type="text" id="name" name="name"><br><br>
+
+      
+      <label for="mobile">Enter mobile number:</label><br>
+      <input type="text" id="mobile" name="mobile"><br><br>
+
+
+      <label for="email">Enter email id:</label><br>
+      <input type="text" id="email" name="email"><br><br>
+
+      <button id="btn-2">Submit</button>
+
+  </div>
+
+  
+</body>
+</html>
