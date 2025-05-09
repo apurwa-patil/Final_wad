@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+    <title>Enhanced Mobile Website</title>
+
+   
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            font-size: 24px;
+            z-index: 1000;
+        }
+
+        .content-section {
+            margin-top: 60px;
+            padding: 20px;
+        }
+
+        .content-text {
+            font-size: 18px;
+            color: #333;
+        }
+
+        .btn-custom {
+            background-color: #4CAF50;
+            color: white;
+            font-size: 18px;
+            padding: 10px;
+            border-radius: 5px;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 20px;
+        }
+
+        .btn-custom:hover {
+            background-color: #45a049;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #f1f1f1;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    
+    <div data-role="page" id="home" data-theme="a" data-transition="flip">
+        <div class="header">
+            Welcome to My Mobile Website
+        </div>
+
+        <div class="content-section">
+            <p class="content-text">This is an enhanced mobile website with smooth transitions and stylish design.</p>
+            <p class="content-text">We offer great content and features to keep you engaged.</p>
+            <a href="#about" class="btn-custom" data-role="button" data-transition="slide">Go to About Page</a>
+        </div>
+
+        <div class="footer">
+            &copy; 2025 Mobile Website
+        </div>
+    </div>
+
+
+    <div data-role="page" id="about" data-theme="a" data-transition="slideup">
+        <div class="header">
+            About Us
+        </div>
+
+        <div class="content-section">
+            <p class="content-text">We are a company dedicated to creating the best mobile websites. Our goal is to enhance user experience with interactive designs and smooth transitions.</p>
+            <p class="content-text">Our website is optimized for both mobile and desktop views, ensuring that you always have the best experience, no matter your device.</p>
+            <a href="#home" class="btn-custom" data-role="button" data-transition="flip">Back to Home</a>
+        </div>
+
+        <div class="footer">
+            &copy; 2025 Mobile Website
+        </div>
+    </div>
+
+</body>
+</html>
